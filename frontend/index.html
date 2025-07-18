@@ -5,6 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./output.css">
   <title>AI Builder</title>
+
+  <style>
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @-webkit-keyframes rotate {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    .load {
+      width: 100px;
+      height: 100px;
+      margin: 110px ;
+      border: solid 10px #8822aa;
+      border-radius: 50%;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      transition: all 0.5s ease-in;
+      animation: rotate;
+      animation-duration: 1.0s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  </style>
 </head>
 <body class="bg-gray-100 p-2">
 
@@ -26,6 +61,7 @@
   </nav>
 
   <br>
+  <br>
   <!-- link input -->
   <div class="flex justify-center">
     <div class="p-4 bg-white rounded-lg flex flex-col items-center justify-center w-full md:w-11/12 lg:w-9/12 mx-4 shadow-lg">
@@ -42,8 +78,11 @@
         </button>
       </div>
 
+      <!-- loader -->
+       <div style="display: none;" id="loading-circle" class="load"></div>
+
       <!-- generated content -->
-      <div>
+      <div style="display: none;">
         <h2 class="font-bold text-2xl text-center">Generated blog</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis veniam optio quos maxime, reiciendis mollitia illum, quam fugit laudantium cupiditate, suscipit sunt praesentium! Eveniet, velit. Iure laudantium cum reiciendis vel.</p>
       </div>
