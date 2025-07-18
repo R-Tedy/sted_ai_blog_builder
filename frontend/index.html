@@ -6,9 +6,50 @@
   <link rel="stylesheet" href="./output.css">
   <title>AI Builder</title>
 </head>
-<body>
-  <h1 class="text-2xl font-bold italic">
-    This is an AI application.
-  </h1>
+<body class="bg-gray-100 p-2">
+
+  <!-- navigation -->
+  <nav class="px-2 flex justify-between items-center">
+    <div>
+      <a href="/frontend/index.html" class="capitalize font-black text-xl">
+        AI blog builder
+      </a>
+    </div>
+    <div class="flex gap-4 text-sm">
+      <a href="/frontend/login.html" class="hover:underline hover:font-bold">
+        Log In
+      </a>
+      <a href="/frontend/signup.html" class="hover:underline hover:font-bold">
+        Sign Up
+      </a>
+    </div>
+  </nav>
+
+  <br>
+  <!-- link input -->
+  <div class="flex justify-center">
+    <div class="p-4 bg-white rounded-lg flex flex-col items-center justify-center w-full md:w-11/12 lg:w-9/12 mx-4 shadow-lg">
+      <h1 class="text-3xl font-bold text-center py-4">
+        Convert any youtube video to a blog with one click!!
+      </h1>
+      <p class="text-center w-10/12">
+        Have ever watched a youtube video and wondered, 'I would want this in writing to go through later'. Well, good thing we have this site, a one stop shop to convert all your youtube content into written material. And you can share it with friends and family. Enjoy!!.
+      </p>
+      <div class="py-4 w-full flex justify-center gap-2">
+        <input type="url" class="p-2 border border-gray-500 rounded-lg w-8/12" placeholder="Enter the url link...">
+        <button class="py-2 px-4 font-semibold bg-gray-800 hover:bg-gray-900 cursor-pointer text-white rounded-lg">
+          Generate
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- generated content -->
+
+  <footer class=" flex justify-center items-center p-4">
+    <small class="text-gray-500 text-center">
+      Powered by Roland Stedy
+    </small>
+  </footer>
 </body>
 </html>
